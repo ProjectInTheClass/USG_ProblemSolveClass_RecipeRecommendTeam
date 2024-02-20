@@ -6,81 +6,67 @@
 //
 
 import SwiftUI
-import CoreData
+
 
 struct ContentView: View {
-    @Environment(\.managedObjectContext) private var viewContext
 
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-        animation: .default)
-    private var items: FetchedResults<Item>
-
+    @State private var text: String = ""
+    
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item3 at \(item.timestamp!, formatter: itemFormatter)")
-                    } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
+        ZStack{
+            Color(red: 255 / 255, green: 235 / 255, blue: 206 / 255)
+                .ignoresSafeArea()
+            VStack {
+                VStack(spacing: 15) {
+                    HStack {
+                        Text("오늘의 요리")
+                            .font(.custom("Dongle-Bold", size: 36))
+                        
+                        Spacer()
                     }
-                }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
+                    .padding(.leading, 20)
+                    
+                    TextField("레시피 검색", text: $text)
+                        .background(Color(red: 175, green: 175, blue: 175))
+                        .textFieldStyle(.roundedBorder).padding([.leading, .trailing], 20)
+                    
+                    HStack {
+                        Text("인기 레시피")
+                            .font(.custom("Dongle-Bold", size: 36))
+                        
+                        Spacer()
                     }
+                    .padding(.leading, 20)
+
+                    ScrollView(.horizontal, content: {
+                        HStack {
+                            ForEach(0..<4)  { _ in
+                                RoundedRectangle(cornerRadius: 20)
+                                    .fill(Color.white)
+                                    .frame(width: 130, height: 130)
+                                    .padding(.leading, 5)
+                            }
+                        }
+                        .padding([.leading, .trailing], 10)
+                    })
+                    
+                    HStack {
+                        Text("내가 저장한 레시피")
+                            .font(.custom("Dongle-Bold", size: 36))
+                        
+                        Spacer()
+                    }
+                    .padding(.leading, 20)
+                    
                 }
-            }
-            Text("Select an item")
-        }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+                Spacer()
             }
         }
     }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
-    }
+   
 }
 
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
 
 #Preview {
-    ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+    ContentView()
 }

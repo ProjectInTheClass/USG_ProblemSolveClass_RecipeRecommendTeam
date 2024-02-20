@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		334CB0252B847BBE0070E361 /* FirstLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334CB0242B847BBE0070E361 /* FirstLoadingView.swift */; };
+		334CB0282B847F9A0070E361 /* Dongle-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 334CB0272B847F9A0070E361 /* Dongle-Bold.ttf */; };
 		338DAF942B8393E200B932F9 /* RecipeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338DAF932B8393E200B932F9 /* RecipeApp.swift */; };
 		338DAF962B8393E200B932F9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338DAF952B8393E200B932F9 /* ContentView.swift */; };
 		338DAF982B8393E400B932F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 338DAF972B8393E400B932F9 /* Assets.xcassets */; };
@@ -16,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		334CB0242B847BBE0070E361 /* FirstLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLoadingView.swift; sourceTree = "<group>"; };
+		334CB0272B847F9A0070E361 /* Dongle-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dongle-Bold.ttf"; sourceTree = "<group>"; };
+		334CB0292B84804B0070E361 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		338DAF902B8393E200B932F9 /* Recipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recipe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		338DAF932B8393E200B932F9 /* RecipeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeApp.swift; sourceTree = "<group>"; };
 		338DAF952B8393E200B932F9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		334CB0262B847F6D0070E361 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				334CB0272B847F9A0070E361 /* Dongle-Bold.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		338DAF872B8393E200B932F9 = {
 			isa = PBXGroup;
 			children = (
@@ -55,8 +68,11 @@
 		338DAF922B8393E200B932F9 /* Recipe */ = {
 			isa = PBXGroup;
 			children = (
+				334CB0292B84804B0070E361 /* Info.plist */,
+				334CB0262B847F6D0070E361 /* Font */,
 				338DAF932B8393E200B932F9 /* RecipeApp.swift */,
 				338DAF952B8393E200B932F9 /* ContentView.swift */,
+				334CB0242B847BBE0070E361 /* FirstLoadingView.swift */,
 				338DAF972B8393E400B932F9 /* Assets.xcassets */,
 				338DAF9C2B8393E400B932F9 /* Persistence.swift */,
 				338DAF9E2B8393E400B932F9 /* Recipe.xcdatamodeld */,
@@ -133,6 +149,7 @@
 			files = (
 				338DAF9B2B8393E400B932F9 /* Preview Assets.xcassets in Resources */,
 				338DAF982B8393E400B932F9 /* Assets.xcassets in Resources */,
+				334CB0282B847F9A0070E361 /* Dongle-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +164,7 @@
 				338DAF962B8393E200B932F9 /* ContentView.swift in Sources */,
 				338DAF942B8393E200B932F9 /* RecipeApp.swift in Sources */,
 				338DAFA02B8393E400B932F9 /* Recipe.xcdatamodeld in Sources */,
+				334CB0252B847BBE0070E361 /* FirstLoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +300,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Recipe/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Recipe/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -310,6 +329,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Recipe/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Recipe/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

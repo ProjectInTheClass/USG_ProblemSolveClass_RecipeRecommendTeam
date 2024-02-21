@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		334CB0252B847BBE0070E361 /* FirstLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334CB0242B847BBE0070E361 /* FirstLoadingView.swift */; };
 		334CB0282B847F9A0070E361 /* Dongle-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 334CB0272B847F9A0070E361 /* Dongle-Bold.ttf */; };
+		334CB02B2B848E8C0070E361 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334CB02A2B848E8C0070E361 /* SearchView.swift */; };
 		338DAF942B8393E200B932F9 /* RecipeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338DAF932B8393E200B932F9 /* RecipeApp.swift */; };
 		338DAF962B8393E200B932F9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338DAF952B8393E200B932F9 /* ContentView.swift */; };
 		338DAF982B8393E400B932F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 338DAF972B8393E400B932F9 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 		334CB0242B847BBE0070E361 /* FirstLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLoadingView.swift; sourceTree = "<group>"; };
 		334CB0272B847F9A0070E361 /* Dongle-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dongle-Bold.ttf"; sourceTree = "<group>"; };
 		334CB0292B84804B0070E361 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		334CB02A2B848E8C0070E361 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		338DAF902B8393E200B932F9 /* Recipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recipe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		338DAF932B8393E200B932F9 /* RecipeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeApp.swift; sourceTree = "<group>"; };
 		338DAF952B8393E200B932F9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				334CB0262B847F6D0070E361 /* Font */,
 				338DAF932B8393E200B932F9 /* RecipeApp.swift */,
 				338DAF952B8393E200B932F9 /* ContentView.swift */,
+				334CB02A2B848E8C0070E361 /* SearchView.swift */,
 				334CB0242B847BBE0070E361 /* FirstLoadingView.swift */,
 				338DAF972B8393E400B932F9 /* Assets.xcassets */,
 				338DAF9C2B8393E400B932F9 /* Persistence.swift */,
@@ -164,6 +167,7 @@
 				338DAF962B8393E200B932F9 /* ContentView.swift in Sources */,
 				338DAF942B8393E200B932F9 /* RecipeApp.swift in Sources */,
 				338DAFA02B8393E400B932F9 /* Recipe.xcdatamodeld in Sources */,
+				334CB02B2B848E8C0070E361 /* SearchView.swift in Sources */,
 				334CB0252B847BBE0070E361 /* FirstLoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -27,7 +27,7 @@ struct ContentView: View {
                     .padding(.leading, 20)
                     
                     TextField("레시피 검색", text: $text)
-                        .background(Color(red: 175, green: 175, blue: 175))
+                        .background(Color.white)
                         .textFieldStyle(.roundedBorder).padding([.leading, .trailing], 20)
                     
                     HStack {
